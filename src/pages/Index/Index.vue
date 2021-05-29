@@ -1,5 +1,5 @@
 <template>
     <div>
-        首頁
+        首页
     </div>
 </template>

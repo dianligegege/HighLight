@@ -7,8 +7,8 @@ export default new Router({
     mode: 'history',
     routes: [
         {
-            path: '/home',
-            component: () => import(/* webpackChunkName: "page-index" */'@/pages/Index.vue'),
+            path: '/',
+            component: () => import(/* webpackChunkName: "page-index" */'@/pages/Index/Index.vue'),
             meta: {
                 layout: 'Default',
             },
