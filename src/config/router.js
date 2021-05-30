@@ -8,10 +8,14 @@ export default new Router({
     routes: [
         {
             path: '/',
-            component: () => import(/* webpackChunkName: "page-index" */'@/pages/Index/Index.vue'),
+            component: () => import(/* webpackChunkName: "page-index" */'@/pages/Index/index.vue'),
             meta: {
                 layout: 'Default',
             },
+        },
+        {
+            path: '/list',
+            component: () => import(/* webpackChunkName: "page-list" */'@/pages/List/index.vue'),
         },
         {
             path: '*',

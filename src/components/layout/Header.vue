@@ -1,13 +1,30 @@
 <template>
     <div class="header-wrap">
-        我是header
+        <router-link
+            to="/"
+            class="header-title"
+        >
+            HIGHLIGHT
+        </router-link>
     </div>
 </template>
 
 <style lang="scss" scoped>
 .header-wrap {
-    background-color: #ccc;
-    height: 40px;
-    padding: 20px 20px;
+    position: fixed;
+    width: 100%;
+    height: 50px;
+    padding: 0 20px;
+    color: #fff;
+    background: #f2f6fc0d;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+
+    .header-title {
+        font-weight: bold;
+        color: #ecf5ff;
+    }
 }
 </style>
