@@ -22,12 +22,16 @@
                 </div>
             </div>
             <div class="content-video">
-                <MyVideo />
+                <MyVideo
+                    :options="options1"
+                />
             </div>
         </div>
         <div class="index-content content-nba">
             <div class="content-video">
-                <MyVideo />
+                <MyVideo
+                    :options="options2"
+                />
             </div>
             <div class="content-text">
                 <h2>
@@ -52,7 +56,22 @@ export default {
     },
     data() {
         return {
-
+            options1: {
+                controls: true,
+                poster: 'https://overwatch.nosdn.127.net/2/media/artwork/dva-animated-short.jpg',
+                sources: [{
+                    src: '//vjs.zencdn.net/v/oceans.mp4',
+                    type: 'video/mp4',
+                }],
+            },
+            options2: {
+                controls: true,
+                poster: 'https://nba.2k.com/images/social/social-mamba-cg.jpg',
+                sources: [{
+                    src: '//vjs.zencdn.net/v/oceans.mp4',
+                    type: 'video/mp4',
+                }],
+            },
         };
     },
 };
@@ -101,7 +120,7 @@ export default {
         height: 600px;
         display: flex;
         justify-content: space-between;
-        padding: 100px 20vw;
+        padding: 100px 10vw;
         width: 100%;
 
         .content-text {
@@ -128,10 +147,9 @@ export default {
 
         &.content-ow {
             background: url(~@/assets/images/index/header-bg.jpg) center/cover no-repeat;
-            color: #c7973c;
 
             .text-list {
-                color: #ffad0f;
+                // color: #ffad0f;
             }
         }
 
