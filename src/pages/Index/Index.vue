@@ -57,7 +57,7 @@ export default {
     data() {
         return {
             options1: {
-                controls: true,
+                controls: false,
                 poster: 'https://overwatch.nosdn.127.net/2/media/artwork/dva-animated-short.jpg',
                 sources: [{
                     src: '//vjs.zencdn.net/v/oceans.mp4',
@@ -65,7 +65,7 @@ export default {
                 }],
             },
             options2: {
-                controls: true,
+                controls: false,
                 poster: 'https://nba.2k.com/images/social/social-mamba-cg.jpg',
                 sources: [{
                     src: '//vjs.zencdn.net/v/oceans.mp4',
@@ -147,10 +147,6 @@ export default {
 
         &.content-ow {
             background: url(~@/assets/images/index/header-bg.jpg) center/cover no-repeat;
-
-            .text-list {
-                // color: #ffad0f;
-            }
         }
 
         &.content-nba {

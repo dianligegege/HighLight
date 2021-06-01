@@ -17,8 +17,8 @@
     padding: 0 20px;
     color: #fff;
     background: #f2f6fc0d;
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
     display: flex;
     align-items: center;
 
