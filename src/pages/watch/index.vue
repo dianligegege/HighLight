@@ -9,22 +9,9 @@
                     <Video
                         :options="options"
                     />
-                    <!-- <video src="/-/x/video" /> -->
                 </div>
             </div>
             <div class="watch-list">
-                <el-button
-                    @click="getVideoList"
-                    type="primary"
-                >
-                    发起请求
-                </el-button>
-                <el-button
-                    @click="myName"
-                    type="primary"
-                >
-                    发起请求myName
-                </el-button>
                 <div
                     v-for="(item, index) in list"
                     :key="index"
