@@ -9,11 +9,12 @@
                     <Video
                         :options="options"
                     />
+                    <!-- <video src="/-/x/video" /> -->
                 </div>
             </div>
             <div class="watch-list">
                 <el-button
-                    @click="getName"
+                    @click="getVideoList"
                     type="primary"
                 >
                     发起请求
@@ -59,40 +60,38 @@ export default {
             options: {
                 width: 800,
                 height: 400,
+                sources: {
+                    type: 'video/mp4', // 这里的种类支持很多种：基本视频格式、直播、流媒体等，具体可以参看git网址项目
+                    src: '/-/x/video', // url地址
+                },
             },
             title: '我是biaoti',
-            list: [
-                {
-                    img: 'https://s3.ap-northeast-1.amazonaws.com/defigogo/media/20210531211625-e43ab35c8a5b.png',
-                    title: '推荐我',
-                    info: '我是介绍',
-                },
-                {
-                    img: 'https://s3.ap-northeast-1.amazonaws.com/defigogo/media/20210531211625-e43ab35c8a5b.png',
-                    title: '推荐我',
-                    info: '我是介绍',
-                },
-                {
-                    img: 'https://s3.ap-northeast-1.amazonaws.com/defigogo/media/20210531211625-e43ab35c8a5b.png',
-                    title: '推荐我',
-                    info: '我是介绍',
-                },
-            ],
+            list: [],
         };
     },
     methods: {
         async getName() {
-            const { success, data } = this.$api.node.getName();
+            const { success, data } = await this.$api.node.getName();
             if (success) {
                 console.log(data);
             }
         },
         async myName() {
-            const { success, data } = this.$api.node.myName();
+            const { success, data } = await this.$api.node.myName();
             if (success) {
                 console.log(data);
             }
         },
+        async getVideoList() {
+            const { success, data } = await this.$api.node.getVideoList();
+            if (success) {
+                this.list = data;
+                console.log(this.list);
+            }
+        },
+    },
+    mounted() {
+        this.getVideoList();
     },
 };
 </script>

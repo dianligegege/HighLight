@@ -16,6 +16,8 @@ const node = {
     getName: (params) => get('@node/getName', { params }),
     setName: (params) => post('@node/setName', params),
     myName: (params) => get('@node/myName/zhangsan', { params }),
+    // 获取视频列表
+    getVideoList: (params) => get('@node/getVideoList', { params }),
 };
 
 export const $api = {
